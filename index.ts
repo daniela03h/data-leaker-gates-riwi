@@ -1,19 +1,22 @@
-// import { AuthController } from './src/controllers/auth-controller'
+import { AuthController } from './src/controllers/auth-controller'
+import { guardianAuth } from './src/controllers/guard'
 
-// const loginForm = document.querySelector('.login-form') as HTMLFormElement
+const loginForm = document.querySelector('.login-form') as HTMLFormElement
 
-// const authController = new AuthController()
+const authController = new AuthController()
 
-// loginForm.addEventListener('submit', (event:Event) => {
-//     event.preventDefault()
+window.addEventListener("DOMContentLoaded", () => {
+    guardianAuth()
+});
 
-//     const formData = new FormData(loginForm)
-//     const user = {
-//         email: (formData.get('email')) as string,
-//         password: (formData.get('password')) as string,
-//     }
+loginForm.addEventListener('submit', (event:Event) => {
+    event.preventDefault()
 
-//     authController.login(user)
+    const formData = new FormData(loginForm)
+    const user = {
+        email: (formData.get('email')) as string,
+        password: (formData.get('password')) as string,
+    }
 
-    
-// })
+    authController.login(user)
+})

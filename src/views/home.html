@@ -7,17 +7,25 @@
     <title>Riwi Data Leaker Gates</title>
 </head>
 <body>
+  <div class="loader-container"></div>
     <header>
         <section class="header-title-container">
           <h1 class="header-title">Riwi Data Leaker Gates</h1>
         </section>
         <nav>
           <ul class="nav-list">
-            <li><a href="">Home</a></li>
-            <li><a href="">Agregar post</a></li>
-            <li><button id="logout-button" class="btn btn-primary">Log out</button></li>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./add-post.html">Agregar post</a></li>
+            <li><button class="btn btn-primary logout-button">Log out</button></li>
           </ul>
         </nav>
       </header>
+
+      <main class="home-main">
+        <h1 class="home-title">POST</h1>
+        <section class="post-section"></section>
+      </main>
+
+      <script type="module" src="../controllers/home.ts"></script>
 </body>
 </html>

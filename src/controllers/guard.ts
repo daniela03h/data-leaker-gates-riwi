@@ -6,6 +6,6 @@ export function guardian() {
 
 export function guardianAuth() {
     if (sessionStorage.getItem("token")) {
-        window.location.href = "/src/views/home.html"
+        window.location.href = "src/views/home.html"
     }
 }

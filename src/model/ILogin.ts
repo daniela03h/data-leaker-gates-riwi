@@ -3,6 +3,6 @@ export interface ILogin {
     password: string;
 }
 
-export interface ILoginErrorReponse {
+export interface ILoginReponse {
     message: string;
 }

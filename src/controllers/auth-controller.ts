@@ -1,4 +1,4 @@
-import { ILogin, ILoginErrorReponse } from "../model/ILogin";
+import { ILogin, ILoginReponse } from "../model/ILogin";
 import { IRegisterErrorReponse, IRegisterUser } from "../model/IRegister";
 
 
@@ -32,35 +32,30 @@ export class AuthController {
 
     }
 
-//     async login(credentials: ILogin) {
-//         try {
-//             const response = await fetch(`${this.url}auth/login`, {
-//                 method: 'POST',
-//                 headers: {
-//                     "Content-Type": "Application/json"
-//                 },
-//                 body: JSON.stringify(credentials)
-//             })
+    async login(credentials: ILogin) {
+        try {
+            const response = await fetch(`${this.url}auth/login`, {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "Application/json"
+                },
+                body: JSON.stringify(credentials)
+            })
 
-//             if (response.status != 200) {
-//                 const error: ILoginErrorReponse = await response.json()
-//                 const errorMessage = error.message
-//                 throw new Error(errorMessage)
-//             }
-//             const responseLogin = await response.json()
 
-//             this.tokenLog = responseLogin.token;
-//             sessionStorage.setItem('token', JSON.stringify(responseLogin))
-//             const getToken = sessionStorage.getItem("token");
-//             if (getToken === responseLogin) {
-//                 window.location.href = "../views/home.html"
+            const responseLogin: ILoginReponse = await response.json()
+            if (responseLogin.message !== "Login successful") {
+                throw new Error("Email o contraseña erroneos")
+            }
 
-//             // }
+            sessionStorage.setItem('token', responseLogin.message)
+            window.location.href = "src/views/home.html"
 
-//         } catch (error: any) {
-//             alert(error.message)
-//         }
+        } catch (error: any) {
+            alert(error.message)
+        }
 
-//     }
+    }
 
-// }
+}
+

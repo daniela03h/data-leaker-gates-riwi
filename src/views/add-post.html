@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../scss/add-post.scss" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="loader-container"></div>
+    <header>
+        <section class="header-title-container">
+            <h1 class="header-title">Riwi Data Leaker Gates</h1>
+        </section>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="./home.html">Home</a></li>
+                <li><button class="btn btn-primary logout-button">Log out</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2 class="addCity-title">Agregar post</h2>
+
+        <section class="form-container">
+            <form>
+                <div class="mb-3">
+                    <label for="title-post" class="form-label title-post">Titulo</label>
+                    <input type="text" class="form-control" id="title-post" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="creation-date" class="form-label">Fecha creacion</label>
+                    <input type="text" class="form-control" id="creation-date">
+                </div>
+                <div class="mb-3">
+                    <label for="estimated-publication-date" class="form-label">Fecha publicacion</label>
+                    <input type="text" class="form-control" id="estimated-publication-date">
+                </div>
+                <div class="mb-3">
+                    <label for="cplatform" class="form-label">Plataforma</label>
+                    <input type="text" class="form-control" id="platform">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </section>
+    </main>
+    <script type="module" src="../controllers/add-post.ts"></script>
+</body>
+
+</html>
