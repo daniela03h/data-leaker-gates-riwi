@@ -1,0 +1,9 @@
+@import './styles.scss';
+
+.container-login {
+    height: calc(100vh - 75px);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
