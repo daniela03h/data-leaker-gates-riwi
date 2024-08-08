@@ -22,7 +22,7 @@
         </nav>
     </header>
 
-    <main class="container">
+    <main class="container m-5">
         <h2 class="addCity-title">Agregar post</h2>
 
         <section class="form-container">
@@ -32,16 +32,44 @@
                     <input type="text" class="form-control" id="title-post" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
+                    <label for="body" class="form-label body">Descripcion</label>
+                    <textarea name="body" id="body" class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
                     <label for="creation-date" class="form-label">Fecha creacion</label>
-                    <input type="text" class="form-control" id="creation-date">
+                    <input type="date" class="form-control" id="creation-date">
                 </div>
                 <div class="mb-3">
                     <label for="estimated-publication-date" class="form-label">Fecha publicacion</label>
-                    <input type="text" class="form-control" id="estimated-publication-date">
+                    <input type="date" class="form-control" id="estimated-publication-date">
                 </div>
                 <div class="mb-3">
-                    <label for="cplatform" class="form-label">Plataforma</label>
+                    <label for="status" class="form-label">Estado</label>
+                    <input type="text" class="form-control" id="status">
+                </div>
+                <div class="mb-3">
+                    <label for="approvalPercentage" class="form-label">Porcentaje de aprovancion</label>
+                    <input type="text" class="form-control" id="approvalPercentage">
+                </div>
+                <div class="mb-3">
+                    <label for="corrections" class="form-label">Correciones</label>
+                    <input type="text" class="form-control" id="corrections">
+                </div>
+                <div class="mb-3">
+                    <label for="platform" class="form-label">Plataforma</label>
                     <input type="text" class="form-control" id="platform">
+                </div>
+                <div class="mb-3">
+                    <label for="postUrl" class="form-label">URL</label>
+                    <input type="text" class="form-control" id="postUrl">
+                </div>
+                <div class="mb-3">
+                    <label for="multimediaUrl" class="form-label">multimediaUrl</label>
+                    <input type="text" class="form-control" id="multimediaUrl">
+                </div>
+                <div class="mb-3">
+                    <label for="creator" class="form-label">Creador</label>
+                    <input type="text" class="form-control" id="creator">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

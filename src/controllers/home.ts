@@ -15,6 +15,6 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 logoutButton?.addEventListener("click", () => {
-    sessionStorage.removeItem("token")
+    sessionStorage.removeItem("x-user-email")
     window.location.href = "/"
 })

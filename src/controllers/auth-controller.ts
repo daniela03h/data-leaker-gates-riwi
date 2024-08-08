@@ -44,11 +44,14 @@ export class AuthController {
 
 
             const responseLogin: ILoginReponse = await response.json()
+            console.log(responseLogin);
+            
+            
             if (responseLogin.message !== "Login successful") {
                 throw new Error("Email o contraseña erroneos")
             }
 
-            sessionStorage.setItem('token', responseLogin.message)
+            sessionStorage.setItem('x-user-email', credentials.email)
             window.location.href = "src/views/home.html"
 
         } catch (error: any) {

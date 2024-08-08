@@ -5,13 +5,11 @@ const postSection = document.querySelector('.post-section') as HTMLDivElement;
 const loaderContainer = document.querySelector(".loader-container") as HTMLDivElement;
 
 export async function renderPosts() {
-    console.log('render')
     loaderContainer.style.display = "flex";
     postSection.innerHTML = ''
     try {
         const postController = new PostController();
-        const posts = await postController.getCities();
-
+        const posts = await postController.getPosts();
         posts.forEach(async (post) => {
             postSection?.append(Post(post))
         })

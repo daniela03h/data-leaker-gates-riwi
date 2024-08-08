@@ -10,7 +10,7 @@ const logoutButton = document.querySelector(".logout-button") as HTMLButtonEleme
 const citiesController = new PostController()
 
 logoutButton?.addEventListener("click", () => {
-    sessionStorage.removeItem("token")
+    sessionStorage.removeItem("x-user-email")
     window.location.href = "/"
 })
 
@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 export async function renderPost() {
-    const post = await citiesController.getCity()
+    const post = await citiesController.getPost()
     titlePost.innerHTML = post.title
     creationPost.innerHTML = post.creationDate
     publicationPost.innerHTML = post.estimatedPublicationDate
